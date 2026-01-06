@@ -8,23 +8,31 @@
 }
 nav{
     position: fixed;
-    
     display: flex;
     align-items: center;
     width: 100vw;
-    justify-content: space-between;
     padding: 4vw 4vw;
-   
+    gap:20px;
     justify-content: center;
+    z-index: 100;
+
 }
 .navLinks{
- display: flex;
+     margin: 0px 70px;
+     display: flex;
+     justify-content: space-between;
      gap: 2vw;
 }
 .navLinks h4{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
+    
 
+}
+.navLinks h4:hover{
+    transition: all .3s cubic-bezier(0.21, 0.95, 0.29, 1);
+    color: rgb(133, 133, 133);
+    cursor: pointer;
 }
 nav button{
     padding: 5px 10px;
@@ -33,24 +41,53 @@ nav button{
     border-radius: 20px;
 }
 .nav-bottom{
-    width: 90%;
-
+    height: 0px;
+    width:95%;
     position: absolute;
     bottom: 0px;
     border-bottom: rgb(129, 129, 129) 1px solid;
     transition: all 1s cubic-bezier(0.21, 0.95, 0.29, 1);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 210px;
+    display:flex;
     align-items: flex-start;
+    justify-content: space-between;
+    padding:0 24rem;
+    background-color: #111;
+    z-index: -199;
 }
+.nav-bottom .csDiv:first-child{
+  margin-left: 30px;   
+}
+
+.csDiv h5 span{
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0;
+}
+.csDiv h5 span:hover{
+    transition: all .2s ease-out;
+color: rgb(133, 133, 133);
+cursor: pointer;
+}
+.csDiv h5 {
+margin-bottom: 0.2rem;
+overflow: hidden;
+}
+
 nav:hover .nav-bottom{
     height: 100%;
     bottom: -100%;
-    
 }
-.main{
+nav:hover .csDiv h5 span{
+    opacity: 1; 
+    transform: translateY(20px);
+    transition: all 2s cubic-bezier(0.21, 0.95, 0.29, 1); 
+    transition-delay: .2s;
+    transform: translateY(0);  
 
+}
+
+
+.main{
     height: 100%;
     width: 100%;
 }
@@ -69,10 +106,13 @@ nav:hover .nav-bottom{
     font-size: 8vw;
     text-transform: uppercase;
     line-height: 8vw;
+    letter-spacing: -0.2rem;
 }
 .devtag{
+    margin-top: 10px;
 display: flex;
-gap:.5px
+gap:.5px;
+font-size: 1.3rem;
 }
 .page1 p svg{
     
@@ -84,6 +124,8 @@ gap:.5px
     text-align: center;
     margin-top: 2.4vh;
     font-weight: 300;
+    font-size: 1.3rem;
+    color: antiquewhite;
 }
 
 .skills{
@@ -94,7 +136,7 @@ gap:.5px
 .skills h4{
     margin-top: 2.2vh;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 1vw;
     padding: 5px 10px;
     border-radius: 40px;
     border: white 1px solid;
