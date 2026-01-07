@@ -23,7 +23,7 @@ nav{
      justify-content: space-between;
      gap: 2vw;
 }
-.navLinks h4{
+.navLinks h4 span{
     font-size: 1rem;
     font-weight: 500;
     
@@ -107,7 +107,7 @@ nav button{
     opacity: 0;
 }
 .csDiv h5 span:hover{
-    transition: all .2s ease-out;
+    transition: all .2s ease-in;
 color: rgb(133, 133, 133);
 cursor: pointer;
 }
@@ -123,7 +123,7 @@ nav:hover .nav-bottom{
 nav:hover .csDiv h5 span{
     opacity: 1; 
     transform: translateY(20px);
-    transition: all 2s cubic-bezier(0.21, 0.95, 0.29, 1); 
+    transition: all .2s cubic-bezier(0.21, 0.95, 0.29, 1); 
     transition-delay: .2s;
     transform: translateY(0);  
 
@@ -143,6 +143,7 @@ nav:hover .csDiv h5 span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .page1 h1{
@@ -188,3 +189,52 @@ font-size: 1.3rem;
 
 /* Infinite Div */
 
+.moving-div{
+   position: absolute;
+   bottom: 5%;
+   width: 40%;
+   white-space: nowrap;
+   padding: 1rem;
+   overflow: hidden;
+   z-index: 0;
+}
+.moving_img{
+    display: inline-block;
+    animation-name: movingImages ;
+    animation-timing-function:linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.moving_img img {
+    height: 40px;
+    width: auto;
+    margin: 0 .8rem
+}
+@keyframes movingImages {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.fade-left{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background-color: #f59aff;
+    z-index: 10;
+    left:0px;
+    top:0;
+    background: linear-gradient(to right ,#111, transparent);
+}
+.fade-right{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background-color: #f59aff;
+    z-index: 10;
+    right:0px;
+    top:0;
+    background: linear-gradient(to right,transparent ,#111);
+}
