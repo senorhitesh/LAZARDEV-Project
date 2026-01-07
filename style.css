@@ -35,10 +35,53 @@ nav{
     cursor: pointer;
 }
 nav button{
-    padding: 5px 10px;
-    background-color: orange;
-    border: none;
-    border-radius: 20px;
+    
+  display: flex;
+  background-color: #1d2129;
+  border-radius: 40px;
+  justify-content:space-between;
+  align-items: center;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  gap: 10px;
+}
+.icon-Container {
+  width: 40px;
+  height: 40px;
+  background-color: #f59aff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #1d2129;
+}
+.text {
+  width: calc(170px - 45px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+}
+.icon-Container svg {
+  transition-duration: 1.5s;
+}
+ .icon-Container svg:hover {
+  transition-duration: 1.5s;
+  animation: arrow 1s linear infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    margin-left: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
+  }
 }
 .nav-bottom{
     height: 0px;
@@ -142,4 +185,6 @@ font-size: 1.3rem;
     border: white 1px solid;
     margin-left: 10px;
 }
+
+/* Infinite Div */
 
