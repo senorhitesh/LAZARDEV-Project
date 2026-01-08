@@ -97,8 +97,8 @@ nav button{
     background-color: #111;
     z-index: -199;
 }
-.nav-bottom .csDiv:first-child{
-  margin-left: 30px;   
+.nav-bottom .csDiv:last-child{
+  margin-right: 30px;   
 }
 
 .csDiv h5 span{
@@ -119,6 +119,7 @@ overflow: hidden;
 nav:hover .nav-bottom{
     height: 100%;
     bottom: -100%;
+    margin: 2rem;
 }
 nav:hover .csDiv h5 span{
     opacity: 1; 
