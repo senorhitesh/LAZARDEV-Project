@@ -259,16 +259,53 @@ font-size: 1.3rem;
  padding-bottom: 5vw;
 }
 
-.left_Part, .right_Part{
+.left_Part{
     height: 100%;
     width: 40%;
-    background-color: #36383b;
+    background-color: #2b2b2b;
     display: flex;
     align-self: flex-start;
     justify-content:space-between;
     flex-direction: column;
-    padding: 2vh;
+    padding:5vh 2vh;
 }
-.right_Part{
-   width: 50%; 
+ .right_Part{
+    height: 100%;
+    width: 50%; 
+    background-color: #2b2b2b;
+    display: flex;
+    align-self: flex-start;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+.left_Part{
+    font-size: 1.3rem;
+    gap: 5px;
+}
+.left_Part p span{
+    color: #afafaf;
+     font-style: italic;
+}
+
+
+/* Right Part */
+.projects-divs{
+    background-color: rgb(68, 68, 68);
+    border-bottom: 2px solid red;
+    padding: 6vh 3vh 7vh 3vh;
+    height: 30.33%;
+}
+.projects-divs img{
+height: 25vh;
+width: 25vh;
+object-fit:cover;
+object-position: center;
+border-radius: 50%;
+opacity: 0;
+}
+
+.projects-divs h3{
+    font-weight: 400;
+    font-size: 1.3rem;
 }
