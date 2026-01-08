@@ -11,10 +11,11 @@ nav{
     display: flex;
     align-items: center;
     width: 100vw;
-    padding: 4vw 4vw;
+    padding: 2vw 4vw;
     gap:20px;
     justify-content: center;
     z-index: 100;
+    background-color: #111;
 
 }
 .navLinks{
@@ -22,12 +23,11 @@ nav{
      display: flex;
      justify-content: space-between;
      gap: 2vw;
+
 }
 .navLinks h4 span{
     font-size: 1rem;
     font-weight: 500;
-    
-
 }
 .navLinks h4:hover{
     transition: all .3s cubic-bezier(0.21, 0.95, 0.29, 1);
@@ -69,7 +69,7 @@ nav button{
 .icon-Container svg {
   transition-duration: 1.5s;
 }
- .icon-Container svg:hover {
+.icon-Container svg:hover {
   transition-duration: 1.5s;
   animation: arrow 1s linear infinite;
 }
@@ -88,7 +88,7 @@ nav button{
     width:95%;
     position: absolute;
     bottom: 0px;
-    border-bottom: rgb(129, 129, 129) 1px solid;
+    border-bottom: rgb(68, 68, 68) .51px solid;
     transition: all 1s cubic-bezier(0.21, 0.95, 0.29, 1);
     display:flex;
     align-items: flex-start;
@@ -247,19 +247,26 @@ font-size: 1.3rem;
 /* Page 2 */
 
 .page2{
+    border-top: rgb(68, 68, 68) .31px solid;
  height: 100vh;
  width: 100%;
  background-color: #111;
  position: relative;
  display: flex;
  justify-content: space-between;
- padding: 5vh 11vh;
+ padding: 0vh 11vh;
+ padding-bottom: 5vw;
 }
 
 .left_Part, .right_Part{
     height: 100%;
     width: 40%;
     background-color: #36383b;
+    display: flex;
+    align-self: flex-start;
+    justify-content:space-between;
+    flex-direction: column;
+    padding: 2vh;
 }
 .right_Part{
    width: 50%; 
