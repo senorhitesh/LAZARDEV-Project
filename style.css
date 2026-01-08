@@ -133,6 +133,8 @@ nav:hover .csDiv h5 span{
 .main{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .page1{
@@ -158,6 +160,10 @@ display: flex;
 gap:.5px;
 font-size: 1.3rem;
 }
+.hero, .page1, body {
+  position: relative;
+}
+
 .page1 p svg{
     
      width:"2em" ;height:"2em";
@@ -196,7 +202,8 @@ font-size: 1.3rem;
    white-space: nowrap;
    padding: 1rem;
    overflow: hidden;
-   z-index: 0;
+   z-index: 2;
+
 }
 .moving_img{
     display: inline-block;
@@ -208,7 +215,7 @@ font-size: 1.3rem;
 .moving_img img {
     height: 40px;
     width: auto;
-    margin: 0 .8rem
+    margin: 0 .8rem;
 }
 @keyframes movingImages {
     0%{
@@ -222,7 +229,6 @@ font-size: 1.3rem;
     height: 100%;
     width: 20%;
     position: absolute;
-    background-color: #f59aff;
     z-index: 10;
     left:0px;
     top:0;
@@ -232,9 +238,29 @@ font-size: 1.3rem;
     height: 100%;
     width: 20%;
     position: absolute;
-    background-color: #f59aff;
     z-index: 10;
     right:0px;
     top:0;
     background: linear-gradient(to right,transparent ,#111);
+}
+
+/* Page 2 */
+
+.page2{
+ height: 100vh;
+ width: 100%;
+ background-color: #111;
+ position: relative;
+ display: flex;
+ justify-content: space-between;
+ padding: 5vh 11vh;
+}
+
+.left_Part, .right_Part{
+    height: 100%;
+    width: 40%;
+    background-color: #36383b;
+}
+.right_Part{
+   width: 50%; 
 }
