@@ -105,15 +105,20 @@ nav button{
     font-weight: 400;
     font-size: 0.8rem;
     opacity: 0;
+     transition: all .2s cubic-bezier(0.21, 0.95, 0.29, 1);
+     margin-bottom: 2px;
 }
 .csDiv h5 span:hover{
-    transition: all .2s ease-in;
+    transition: all .1s linear;
 color: rgb(133, 133, 133);
 cursor: pointer;
+opacity: 1;
 }
 .csDiv h5 {
 margin-bottom: 0.2rem;
 overflow: hidden;
+
+
 }
 
 nav:hover .nav-bottom{
@@ -123,11 +128,9 @@ nav:hover .nav-bottom{
 }
 nav:hover .csDiv h5 span{
     opacity: 1; 
-    transform: translateY(20px);
     transition: all .2s cubic-bezier(0.21, 0.95, 0.29, 1); 
     transition-delay: .2s;
-    transform: translateY(0);  
-
+    transform: translateY(0); 
 }
 
 
@@ -248,7 +251,7 @@ font-size: 1.3rem;
 /* Page 2 */
 
 .page2{
-    border-top: rgb(68, 68, 68) .31px solid;
+    border-top: rgb(32, 32, 32) .31px solid;
  height: 100vh;
  width: 100%;
  background-color: #111;
@@ -262,7 +265,6 @@ font-size: 1.3rem;
 .left_Part{
     height: 100%;
     width: 40%;
-    background-color: #2b2b2b;
     display: flex;
     align-self: flex-start;
     justify-content:space-between;
@@ -272,7 +274,6 @@ font-size: 1.3rem;
  .right_Part{
     height: 100%;
     width: 50%; 
-    background-color: #2b2b2b;
     display: flex;
     align-self: flex-start;
     justify-content:space-between;
@@ -291,10 +292,41 @@ font-size: 1.3rem;
 
 /* Right Part */
 .projects-divs{
-    background-color: rgb(68, 68, 68);
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid rgb(41, 41, 41);
     padding: 6vh 3vh 7vh 3vh;
     height: 30.33%;
+    transition: all .2s ease-in;
+    position: relative;
+    margin-top: 20px;
+
+}
+.projects-divs .arrow{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 0px 50px 0 0;
+    overflow: hidden;
+    transform: translate(0, 0);
+    opacity: .3;
+}
+.projects-divs:hover{
+    border-bottom: 2px solid rgb(207, 207, 207);
+}
+
+@keyframes arrow{
+    0%{
+            transform: translate(0px, -0px);
+    }
+    50%{
+            transform: translate(2.5px, -2.5px);
+    }
+    100%{
+        transform: translate(5px, -5px);
+    }
+}
+.projects-divs:hover .arrow{
+    animation: arrow .2s ease-in forwards;
+    opacity: 1;
 }
 .projects-divs img{
 height: 25vh;
@@ -303,9 +335,11 @@ object-fit:cover;
 object-position: center;
 border-radius: 50%;
 opacity: 0;
+scale: 0;
 }
 
 .projects-divs h3{
     font-weight: 400;
     font-size: 1.3rem;
 }
+
