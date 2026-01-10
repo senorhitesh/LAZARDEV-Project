@@ -251,7 +251,7 @@ font-size: 1.3rem;
 /* Page 2 */
 
 .page2{
-    border-top: rgb(32, 32, 32) .31px solid;
+ border-top: rgb(32, 32, 32) .31px solid;
  height: 100vh;
  width: 100%;
  background-color: #111;
@@ -343,3 +343,56 @@ scale: 0;
     font-size: 1.3rem;
 }
 
+.page3{
+ height: 100vh;
+ width: 100%;
+ background-color: #fcfcfc;
+ position: relative;
+ display: flex;
+ flex-direction:column;
+ justify-content: center;
+ padding: 18vh 11vh;
+ color: #050505;
+}
+.Avobe {
+    width: 100%;
+    background-color: #d6d6d6;
+    height: 60%;padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Avobe h1 span{
+  color:#34192F;
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  letter-spacing: -3px;
+  line-height: .7;
+   background-image:
+    url("https://grainy-gradients.vercel.app/noise.svg"),
+    linear-gradient(#2a0f23, #2a0f23);
+}
+.decoratives{
+    align-self: baseline;
+}
+.decoratives img{
+ width: 50px;
+ height: 50px;
+}
+.Avobe  span{
+  color: #050505;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.Avobe  p{
+  margin-top: 20px;
+  color: #050505;   
+  font-size: 1.2rem;
+} 
+
+.rightPart{
+    width: 100%;
+    background-color: #afafaf;
+    height: 40%;
+}
